@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252627"
+    tools:context=".Image_Uploader_Activity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/action_bar_bg"
+            android:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:titleTextColor="@color/white"
+                android:background="@drawable/action_bar_bg"
+                android:backgroundTint="@null"
+                app:title="Image Uploader">
+
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="14dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cover_photo"
+                >
+
+                <ImageView
+                    android:id="@+id/gallery_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/placeholder"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_image_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+           android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:boxBackgroundMode="none"
+            android:textColorHint="#CCFFFFFF"
+            android:elevation="5dp"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:hintTextColor="#CCFFFFFF">
+
+            <EditText
+                android:id="@+id/image_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:background="@drawable/full_name_bg"
+                android:backgroundTint="@null"
+                android:fontFamily="@font/ubuntu"
+                android:hint="Image Title"
+                android:inputType="text"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:textColor="#CCFFFFFF"
+                android:textColorHint="#CCFFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_image_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="none"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@null"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#CCFFFFFF"
+            android:elevation="5dp"
+            app:hintTextColor="#CCFFFFFF"
+            app:layout_constraintTop_toBottomOf="@id/ti_image_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <EditText
+                android:id="@+id/image_description"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:autofillHints=""
+                android:background="@drawable/about_yourself_bg"
+                android:backgroundTint="@null"
+                android:fontFamily="@font/ubuntu"
+                android:gravity="top|start"
+                android:hint="Image Caption"
+                android:inputType="textAutoCorrect|textMultiLine"
+                android:padding="15dp"
+                android:textColor="#CCFFFFFF"
+                android:textColorHint="#CCFFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_register"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/group_3"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/ubuntu"
+            android:text="Upload"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ti_image_caption"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

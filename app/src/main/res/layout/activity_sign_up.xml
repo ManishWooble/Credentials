@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252627"
+    android:scrollbars="none"
+    tools:context=".Sign_Up_Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+       >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/ellipse"
+            android:elevation="5dp"
+            android:foregroundGravity="center"
+            android:padding="12dp"
+            android:src="@drawable/ic_back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:lineHeight="40dp"
+            android:text="Create"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_back"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:lineHeight="40dp"
+            android:text="Account"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_create"
+            tools:targetApi="p" />
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:lineHeight="15dp"
+            android:text="Full Name"
+            android:textColor="#B3FFFFFF"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_account"
+            tools:targetApi="p" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_edittext_background"
+            android:elevation="8dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:gravity="center_vertical"
+            android:hint="Andrew"
+            android:inputType="textEmailAddress"
+            android:lineHeight="15dp"
+            android:padding="12dp"
+            android:textColor="#CCFFFFFF"
+            android:textColorHint="#CCFFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:lineHeight="15dp"
+            android:text="Mobile Number"
+            android:textColor="#B3FFFFFF"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_name"
+            tools:targetApi="p" />
+
+        <EditText
+            android:id="@+id/et_number"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="5dp"
+            android:autofillHints=""
+            android:background="@drawable/login_edittext_background"
+            android:elevation="8dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:gravity="center_vertical"
+            android:hint="9876543210"
+            android:inputType="number"
+            android:lineHeight="15dp"
+            android:padding="12dp"
+            android:textColor="#CCFFFFFF"
+            android:textColorHint="#CCFFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_number"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:lineHeight="15dp"
+            android:text="Your email"
+            android:textColor="#B3FFFFFF"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_number"
+            tools:targetApi="p" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="5dp"
+            android:autofillHints=""
+            android:background="@drawable/login_edittext_background"
+            android:elevation="8dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:gravity="center_vertical"
+            android:hint="youremail@example.com"
+            android:inputType="textEmailAddress"
+            android:lineHeight="15dp"
+            android:padding="12dp"
+            android:textColor="#CCFFFFFF"
+            android:textColorHint="#CCFFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_email"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:alpha="0.7"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="Password"
+            android:textColor="#B3FFFFFF"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_email"
+            tools:ignore="UnusedAttribute" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="5dp"
+            android:autofillHints=""
+            android:background="@drawable/login_edittext_background"
+            android:drawableEnd="@drawable/ic_password_toggle"
+            android:elevation="8dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:gravity="center_vertical"
+            android:hint="********"
+            android:inputType="textPassword"
+            android:lineHeight="15dp"
+            android:padding="12dp"
+            android:textColor="#CCFFFFFF"
+            android:textColorHint="#CCFFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_password"
+            tools:targetApi="p" />
+
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="20dp"
+            android:text="I agree to the Terms &amp; Conditions"
+            android:textSize="14sp"
+            android:textColor="#CCFFFFFF"
+            android:theme="@style/WhiteCheck"
+            android:padding="8dp"
+            android:button="@drawable/checkbox_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_password" />
+
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/btn_register"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="30dp"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:background="@drawable/get_started_button"-->
+<!--            android:contentDescription="@string/app_name"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/checkbox" />-->
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/group_3"
+           app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Get started"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/checkbox"/>
+
+        <TextView
+            android:id="@+id/gotoSign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="Already have an account? Sign in"
+            android:textColor="#B3FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/btn_register" />
+
+        <ImageView
+            android:id="@+id/ic_google"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ellipse_4"
+            android:focusable="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_google"
+            app:layout_constraintEnd_toStartOf="@id/ic_linkedin"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toBottomOf="@id/gotoSign_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/ic_linkedin"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ellipse_4"
+            android:focusable="true"
+            android:padding="12dp"
+            android:src="@drawable/ic_linkedin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_google"
+            app:layout_constraintTop_toBottomOf="@id/gotoSign_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp"
+            tools:ignore="ContentDescription" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

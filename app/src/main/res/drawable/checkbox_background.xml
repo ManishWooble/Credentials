@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector  xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<!--    <stroke android:color="@color/white"-->
+<!--        android:width="1.4dp"/>-->
+<!--<solid android:color="#252627"/>-->
+<!--        <corners android:radius="5dp"/>-->
+<!--    <size-->
+<!--        android:width="21dp"-->
+<!--        android:height="21dp"-->
+<!--        android:viewportWidth="21"-->
+<!--        android:viewportHeight="21"/>-->
+
+
+
+        <item android:state_checked="true" android:drawable="@drawable/ic_checked" />
+    <item android:state_checked="false" android:drawable="@drawable/ic_unchecked" />
+
+</selector>

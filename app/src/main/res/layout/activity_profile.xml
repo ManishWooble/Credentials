@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="#252627"
+    tools:context=".ProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="-2dp"
+        android:background="@drawable/action_bar_bg"
+        android:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:titleTextColor="@color/white"
+                android:background="@drawable/action_bar_bg"
+                android:backgroundTint="@null"
+                app:title="Profile">
+
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cover_pic"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="10dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cover_photo"
+               >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/placeholder"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+       <ImageView
+           android:id="@+id/profile_pic"
+           android:layout_width="165dp"
+           android:layout_height="165dp"
+           android:background="@drawable/profile_pic_bg"
+           android:elevation="12sp"
+           android:layout_marginStart="20dp"
+           app:layout_constraintTop_toTopOf="@id/cover_pic"
+           app:layout_constraintStart_toStartOf="@id/cover_pic"
+           app:layout_constraintEnd_toEndOf="@id/cover_pic"
+           app:layout_constraintBottom_toBottomOf="@id/cover_pic"
+           app:layout_constraintVertical_bias="2.0"
+           app:layout_constraintHorizontal_bias="-0"
+           tools:ignore="ContentDescription" />
+
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@id/profile_pic"
+          android:layout_marginTop="10dp">
+
+          <TextView
+              android:id="@+id/tv_name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="40dp"
+              android:fontFamily="@font/ubuntu"
+              android:lineHeight="15dp"
+              android:text="Full Name"
+              android:textColor="#B3FFFFFF"
+              android:textFontWeight="400"
+              android:textSize="14sp"
+              android:textStyle="bold"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              tools:targetApi="p" />
+
+          <EditText
+              android:id="@+id/et_name"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginHorizontal="30dp"
+              android:layout_marginTop="5dp"
+              android:background="@drawable/login_edittext_background"
+              android:elevation="8dp"
+              android:fontFamily="@font/ubuntu"
+              android:gravity="center_vertical"
+              android:hint="Andrew"
+              android:inputType="textEmailAddress"
+              android:lineHeight="15dp"
+              android:padding="12dp"
+              android:textColor="#CCFFFFFF"
+              android:textColorHint="#CCFFFFFF"
+              android:textSize="16sp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/tv_name"
+              tools:targetApi="p" />
+
+          <TextView
+              android:id="@+id/tv_number"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="40dp"
+              android:layout_marginTop="15dp"
+              android:fontFamily="@font/ubuntu"
+              android:lineHeight="15dp"
+              android:text="Mobile Number"
+              android:textColor="#B3FFFFFF"
+              android:textFontWeight="400"
+              android:textSize="14sp"
+              android:textStyle="bold"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/et_name"
+              tools:targetApi="p" />
+
+          <EditText
+              android:id="@+id/et_number"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginHorizontal="30dp"
+              android:layout_marginTop="5dp"
+              android:autofillHints=""
+              android:background="@drawable/login_edittext_background"
+              android:elevation="8dp"
+              android:fontFamily="@font/ubuntu"
+              android:gravity="center_vertical"
+              android:hint="9876543210"
+              android:inputType="number"
+              android:lineHeight="15dp"
+              android:padding="12dp"
+              android:textColor="#CCFFFFFF"
+              android:textColorHint="#CCFFFFFF"
+              android:textSize="16sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/tv_number"
+              tools:targetApi="p" />
+
+          <TextView
+              android:id="@+id/tv_email"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="40dp"
+              android:layout_marginTop="15dp"
+              android:fontFamily="@font/ubuntu"
+              android:lineHeight="15dp"
+              android:text="Your email"
+              android:textColor="#B3FFFFFF"
+              android:textFontWeight="400"
+              android:textSize="14sp"
+              android:textStyle="bold"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/et_number"
+              tools:targetApi="p" />
+
+          <EditText
+              android:id="@+id/et_email"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginHorizontal="30dp"
+              android:layout_marginTop="5dp"
+              android:autofillHints=""
+              android:background="@drawable/login_edittext_background"
+              android:elevation="8dp"
+              android:fontFamily="@font/ubuntu"
+              android:gravity="center_vertical"
+              android:hint="youremail@example.com"
+              android:inputType="textEmailAddress"
+              android:lineHeight="15dp"
+              android:padding="12dp"
+              android:textColor="#CCFFFFFF"
+              android:textColorHint="#CCFFFFFF"
+              android:textSize="16sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/tv_email"
+              tools:targetApi="p" />
+
+          <TextView
+              android:id="@+id/tv_password"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="40dp"
+              android:layout_marginTop="15dp"
+              android:alpha="0.7"
+              android:fontFamily="@font/ubuntu"
+              android:text="Password"
+              android:textColor="#B3FFFFFF"
+              android:textFontWeight="400"
+              android:textSize="14sp"
+              android:textStyle="bold"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/et_email"
+              tools:ignore="UnusedAttribute" />
+
+          <EditText
+              android:id="@+id/et_password"
+              android:layout_width="match_parent"
+              android:layout_height="55dp"
+              android:layout_marginHorizontal="30dp"
+              android:layout_marginTop="5dp"
+              android:autofillHints=""
+              android:background="@drawable/login_edittext_background"
+              android:drawableEnd="@drawable/ic_password_toggle"
+              android:elevation="8dp"
+              android:fontFamily="@font/ubuntu"
+              android:gravity="center_vertical"
+              android:hint="********"
+              android:inputType="textPassword"
+              android:lineHeight="15dp"
+              android:padding="12dp"
+              android:textColor="#CCFFFFFF"
+              android:textColorHint="#CCFFFFFF"
+              android:textSize="16sp"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/tv_password"
+              tools:targetApi="p" />
+
+
+          <com.google.android.material.button.MaterialButton
+              android:id="@+id/btn_register"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:layout_marginHorizontal="30dp"
+              android:layout_marginTop="40dp"
+              android:background="@drawable/group_3"
+              app:backgroundTint="@null"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              android:text="Edit Profile"
+              android:textAllCaps="false"
+              android:textSize="20sp"
+              app:layout_constraintTop_toBottomOf="@id/et_password"/>
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
