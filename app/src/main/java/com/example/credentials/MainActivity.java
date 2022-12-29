@@ -32,7 +32,7 @@ ActivityMainBinding binding;
 
         setSupportActionBar(binding.appBar);
 
-      Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+      getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         NavController navController= Navigation.findNavController(MainActivity.this,R.id.frame_layout);

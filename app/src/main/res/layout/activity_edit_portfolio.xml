@@ -167,7 +167,7 @@
                     android:backgroundTint="@null"
                     android:fontFamily="@font/ubuntu"
                     android:gravity="top|start"
-                    android:hint="About_Yourself"
+                    android:hint="About Yourself"
                     android:inputType="textAutoCorrect|textMultiLine"
                     android:padding="15dp"
                     android:textColor="#CCFFFFFF"

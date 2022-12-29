@@ -16,6 +16,7 @@ ActivitySocialMediaBinding binding;
         binding=ActivitySocialMediaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
         setSupportActionBar(binding.appBar);
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
