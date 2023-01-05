@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#252627"
-    tools:context=".Upload_Project_Activity">
+    android:scrollbars="none"
+    tools:context=".Upload_Work_Activity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,27 +24,26 @@
             android:background="@android:color/transparent"
             android:backgroundTint="@null"
             android:elevation="5dp"
-            android:textColorHint="#CCFFFFFF"
+            android:textColorHint="#B3FFFFFF"
             app:boxBackgroundMode="none"
-            app:hintTextColor="#CCFFFFFF"
+            app:hintTextColor="#B3FFFFFF"
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
                 android:id="@+id/et_project_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:autofillHints=""
-                android:background="@drawable/full_name_bg"
+                android:background="@drawable/login_edittext_background"
                 android:backgroundTint="@null"
                 android:fontFamily="@font/ubuntu"
                 android:gravity="center_vertical"
-                android:hint="Project name"
+                android:hint="Title:"
                 android:inputType="textAutoCorrect"
                 android:padding="15dp"
                 android:singleLine="true"
                 android:textColor="#CCFFFFFF"
-                android:textColorHint="#CCFFFFFF"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -52,63 +52,61 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:background="@android:color/transparent"
             android:backgroundTint="@null"
             android:elevation="5dp"
-            android:textColorHint="#CCFFFFFF"
+            android:textColorHint="#B3FFFFFF"
             app:boxBackgroundMode="none"
-            app:hintTextColor="#CCFFFFFF"
+            app:hintTextColor="#B3FFFFFF"
             app:layout_constraintTop_toBottomOf="@id/ti_project_name">
 
             <EditText
                 android:id="@+id/et_project_aim"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:autofillHints=""
-                android:background="@drawable/full_name_bg"
+                android:background="@drawable/login_edittext_background"
                 android:backgroundTint="@null"
                 android:fontFamily="@font/ubuntu"
                 android:gravity="center_vertical"
-                android:hint="Aim of project"
+                android:hint="Objective:"
                 android:inputType="textAutoCorrect"
                 android:padding="15dp"
                 android:singleLine="true"
                 android:textColor="#CCFFFFFF"
-                android:textColorHint="#CCFFFFFF"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/ti_aboutYourself"
+            android:id="@+id/ti_about_project"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:background="@android:color/transparent"
             android:backgroundTint="@null"
             android:elevation="5dp"
-            android:textColorHint="#CCFFFFFF"
+            android:textColorHint="#B3FFFFFF"
             app:boxBackgroundMode="none"
-            app:hintTextColor="#CCFFFFFF"
+            app:hintTextColor="#B3FFFFFF"
             app:layout_constraintTop_toBottomOf="@id/ti_project_aim">
 
             <EditText
-                android:id="@+id/about_yourself"
+                android:id="@+id/et_about_project"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:autofillHints=""
-                android:background="@drawable/about_yourself_bg"
+                android:background="@drawable/login_edittext_background"
                 android:backgroundTint="@null"
                 android:fontFamily="@font/ubuntu"
                 android:gravity="top|start"
-                android:hint="About Project"
+                android:hint="Description:"
                 android:inputType="textAutoCorrect|textMultiLine"
                 android:padding="15dp"
                 android:textColor="#CCFFFFFF"
-                android:textColorHint="#CCFFFFFF"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -118,7 +116,7 @@
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="25dp"
             android:background="@drawable/cover_photo"
             android:padding="24dp"
             android:src="@drawable/place_holder"
@@ -127,7 +125,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ti_aboutYourself"
+            app:layout_constraintTop_toBottomOf="@id/ti_about_project"
             app:riv_border_color="#333333"
             app:riv_border_width="2dip"
             app:riv_corner_radius="8dp"
@@ -138,7 +136,7 @@
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="25dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/cover_photo"
             android:padding="24dp"
@@ -147,7 +145,7 @@
             app:layout_constraintEnd_toStartOf="@+id/imageView3"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView1"
-            app:layout_constraintTop_toBottomOf="@id/ti_aboutYourself"
+            app:layout_constraintTop_toBottomOf="@id/ti_about_project"
             app:riv_border_color="#333333"
             app:riv_border_width="2dip"
             app:riv_corner_radius="8dp"
@@ -158,7 +156,7 @@
             android:id="@+id/imageView3"
             android:layout_width="0dp"
             android:layout_height="150dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="25dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/cover_photo"
             android:padding="24dp"
@@ -167,7 +165,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@id/ti_aboutYourself"
+            app:layout_constraintTop_toBottomOf="@id/ti_about_project"
             app:riv_border_color="#333333"
             app:riv_border_width="2dip"
             app:riv_corner_radius="8dp"
@@ -177,7 +175,7 @@
             android:id="@+id/imageView4"
             android:layout_width="0dp"
             android:layout_height="150dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/cover_photo"
             android:padding="24dp"
             android:src="@drawable/place_holder"
@@ -196,7 +194,7 @@
             android:id="@+id/imageView5"
             android:layout_width="0dp"
             android:layout_height="150dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/cover_photo"
             android:padding="24dp"
             android:src="@drawable/place_holder"
@@ -216,7 +214,7 @@
             android:id="@+id/imageView6"
             android:layout_width="0dp"
             android:layout_height="150dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/cover_photo"
             android:padding="24dp"
             android:src="@drawable/place_holder"
@@ -241,7 +239,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginHorizontal="20dp"
             android:visibility="visible"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             />
 
         <com.google.android.material.card.MaterialCardView
@@ -253,7 +251,7 @@
             app:layout_constraintTop_toBottomOf="@id/exo_play"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="25dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -305,41 +303,10 @@
             android:textColor="#CCFFFFFF"
             android:layout_gravity="center"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/ti_conclusion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="15dp"
-            android:layout_marginTop="20dp"
-            android:background="@android:color/transparent"
-            android:backgroundTint="@null"
-            android:elevation="5dp"
-            android:textColorHint="#CCFFFFFF"
-            app:boxBackgroundMode="none"
-            app:hintTextColor="#CCFFFFFF"
-            app:layout_constraintTop_toBottomOf="@id/pdf_textview">
 
-            <EditText
-                android:id="@+id/et_conclusion"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:autofillHints=""
-                android:background="@drawable/about_yourself_bg"
-                android:backgroundTint="@null"
-                android:fontFamily="@font/ubuntu"
-                android:gravity="top|start"
-                android:hint="Conclusion"
-                android:inputType="textAutoCorrect|textMultiLine"
-                android:padding="15dp"
-                android:textColor="#CCFFFFFF"
-                android:textColorHint="#CCFFFFFF"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_register"
+            android:id="@+id/bt_uploadProject"
             android:layout_width="200dp"
             android:layout_height="45dp"
             android:layout_marginHorizontal="30dp"
@@ -354,7 +321,7 @@
             android:textSize="20sp"
             android:layout_marginBottom="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ti_conclusion"/>
+            app:layout_constraintTop_toBottomOf="@id/pdf_textview"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

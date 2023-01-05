@@ -63,8 +63,6 @@ ActivityMainBinding binding;
         binding.navigationDrawer.setNavigationItemSelectedListener(this);
          }
 
-
-
     @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -93,8 +91,6 @@ ActivityMainBinding binding;
         }
         return true;
     }
-
-
 
 
     @SuppressLint("RestrictedApi")
@@ -137,8 +133,8 @@ ActivityMainBinding binding;
                 Toast.makeText(this, "E-mail Signature", Toast.LENGTH_SHORT).show();
                 break;
 
-            case R.id.navigation_projects:
-                startActivity(new Intent(MainActivity.this,Upload_Project_Activity.class));
+            case R.id.navigation_works:
+                startActivity(new Intent(MainActivity.this, WorkActivity.class));
                 break;
         }
         return true;

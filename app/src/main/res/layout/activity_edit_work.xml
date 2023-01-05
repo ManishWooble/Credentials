@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252627"
+    android:scrollbars="none"
+    tools:context=".Edit_Work_Activity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/tv_project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/ubuntu"
+            android:lineHeight="15dp"
+            android:text="Title:"
+            android:textColor="#B3FFFFFF"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            tools:targetApi="p" />
+
+        <EditText
+            android:id="@+id/et_project_name"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_edittext_background"
+            android:elevation="8dp"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:inputType="textEmailAddress"
+            android:lineHeight="15dp"
+            android:padding="12dp"
+            android:textColor="#CCFFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_project_name"
+            tools:targetApi="p"
+            android:autofillHints=""
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/tv_project_aim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/ubuntu"
+            android:lineHeight="15dp"
+            android:text="Objective:"
+            android:textColor="#B3FFFFFF"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_project_name"
+            android:layout_marginTop="30dp"
+            tools:targetApi="p" />
+
+        <EditText
+            android:id="@+id/et_project_aim"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_edittext_background"
+            android:elevation="8dp"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center_vertical"
+            android:inputType="textEmailAddress"
+            android:lineHeight="15dp"
+            android:padding="12dp"
+            android:textColor="#CCFFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_project_aim"
+            tools:targetApi="p"
+            tools:ignore="Autofill,LabelFor"
+            />
+
+        <TextView
+            android:id="@+id/tv_about_project"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/ubuntu"
+            android:lineHeight="15dp"
+            android:text="Description:"
+            android:textColor="#B3FFFFFF"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_project_aim"
+            android:layout_marginTop="30dp"
+            tools:targetApi="p" />
+
+        <EditText
+            android:id="@+id/et_about_project"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:autofillHints=""
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/login_edittext_background"
+            android:backgroundTint="@null"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="top|start"
+            app:layout_constraintTop_toBottomOf="@id/tv_about_project"
+            android:inputType="textAutoCorrect|textMultiLine"
+            android:padding="15dp"
+            android:textColor="#CCFFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView1"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/cover_photo"
+            android:padding="24dp"
+            android:src="@drawable/place_holder"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_about_project"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="8dp"
+            app:riv_mutate_background="true" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/cover_photo"
+            android:padding="24dp"
+            android:src="@drawable/place_holder"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView1"
+            app:layout_constraintTop_toBottomOf="@id/et_about_project"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="8dp"
+            app:riv_mutate_background="true" />
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/cover_photo"
+            android:padding="24dp"
+            android:src="@drawable/place_holder"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@id/et_about_project"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="8dp"
+            app:riv_mutate_background="true" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/cover_photo"
+            android:padding="24dp"
+            android:src="@drawable/place_holder"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView1"
+            app:riv_border_color="#333333"
+            android:layout_marginStart="20dp"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="8dp"
+            app:riv_mutate_background="true" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/cover_photo"
+            android:padding="24dp"
+            android:src="@drawable/place_holder"
+            android:visibility="visible"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@id/imageView2"
+            android:layout_marginStart="10dp"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            app:riv_corner_radius="8dp"
+            app:riv_mutate_background="true" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageView6"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/cover_photo"
+            android:padding="24dp"
+            android:src="@drawable/place_holder"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@id/imageView3"
+            app:riv_border_color="#333333"
+            app:riv_border_width="2dip"
+            android:layout_marginEnd="20dp"
+            app:riv_corner_radius="8dp"
+            app:riv_mutate_background="true" />
+
+        <com.google.android.exoplayer2.ui.StyledPlayerControlView
+            android:id="@+id/exo_play"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:layout_constraintTop_toBottomOf="@id/imageView5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:visibility="visible"
+            android:layout_marginTop="25dp"
+            />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/add_pdf"
+            android:layout_width="130dp"
+            android:layout_height="170dp"
+            android:elevation="8dp"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/exo_play"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/cover_photo"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/circle_red"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_pdf"
+                    android:contentDescription="@null" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select pdf"
+                    android:fontFamily="@font/ubuntu"
+                    android:textFontWeight="700"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    tools:targetApi="p" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/pdf_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No file selected"
+            android:textSize="16sp"
+            android:fontFamily="@font/ubuntu"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/add_pdf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#CCFFFFFF"
+            android:layout_gravity="center"/>
+
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_updateProject"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/group_3"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pdf_textview"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
