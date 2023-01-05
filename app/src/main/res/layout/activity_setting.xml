@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252627"
+    android:scrollbars="none"
+    tools:context=".SettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginHorizontal="15dp"
+            tools:ignore="UseCompoundDrawables,UselessParent">
+
+            <ImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/profile_pic_bg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textFontWeight="700"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/ubuntu"
+                tools:targetApi="p" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/help_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help center"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:textColor="#C8C8C8"
+            app:drawableStartCompat="@drawable/ic_help_center"
+            android:fontFamily="@font/ubuntu"
+            android:textStyle="bold"
+            android:textFontWeight="700"
+            android:drawablePadding="20dp"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/privacy_policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy policy"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:textColor="#C8C8C8"
+            app:drawableStartCompat="@drawable/ic_privacy_policy"
+            android:fontFamily="@font/ubuntu"
+            android:textStyle="bold"
+            android:textFontWeight="700"
+            android:drawablePadding="20dp"
+            tools:targetApi="p" />
+
+
+        <TextView
+            android:id="@+id/data_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data privacy"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:textColor="#C8C8C8"
+            app:drawableStartCompat="@drawable/ic_data_privacy"
+            android:fontFamily="@font/ubuntu"
+            android:textStyle="bold"
+            android:textFontWeight="700"
+            android:drawablePadding="20dp"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Term &amp; conditions"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:textColor="#C8C8C8"
+            android:fontFamily="@font/ubuntu"
+            android:textStyle="bold"
+            android:drawablePadding="20dp"
+            android:textFontWeight="700"
+            app:drawableStartCompat="@drawable/ic_terms_and_conditions"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End user license agreement"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:textColor="#C8C8C8"
+            android:fontFamily="@font/ubuntu"
+            android:textStyle="bold"
+            android:drawablePadding="14dp"
+            android:textFontWeight="700"
+            app:drawableStartCompat="@drawable/ic_end_user_license_agreement"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/rateUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate us"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:textColor="#C8C8C8"
+            app:drawableStartCompat="@drawable/ic_baseline_star_rate"
+            android:fontFamily="@font/ubuntu"
+            android:textStyle="bold"
+            android:textFontWeight="700"
+            android:drawablePadding="20dp"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:drawablePadding="20dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="Logout"
+            android:textColor="#C8C8C8"
+            android:textFontWeight="700"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_logout"
+            tools:targetApi="p" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Version: 1.0"
+            android:textFontWeight="700"
+            android:layout_margin="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="20dp"
+            tools:targetApi="p" />
+    </LinearLayout>
+
+</ScrollView>

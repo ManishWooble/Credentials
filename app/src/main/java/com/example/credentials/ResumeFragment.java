@@ -63,6 +63,8 @@ FragmentResumeBinding binding;
         // Inflate the layout for this fragment
         binding=FragmentResumeBinding.inflate(inflater, container, false);
 
+        requireActivity().setTitle("Resume");
+
         return binding.getRoot();
     }
 }

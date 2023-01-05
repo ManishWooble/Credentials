@@ -1,5 +1,6 @@
 package com.example.credentials;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -21,7 +22,9 @@ ActivityProfileBinding binding;
         binding=ActivityProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.appBar);
+        ActionBar actionBar = getSupportActionBar();
+        Objects.requireNonNull(actionBar).setBackgroundDrawable(getResources().getDrawable(R.drawable.action_bar_bakground));
+        actionBar.setTitle("Profile");
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
