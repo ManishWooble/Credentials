@@ -9,10 +9,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.PopupMenu;
+
+import android.widget.SearchView;
 import android.widget.Toast;
 
 
@@ -23,6 +27,8 @@ import java.util.Objects;
 public class WorkActivity extends AppCompatActivity {
 ActivityWorkBinding binding;
 
+
+
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +36,10 @@ ActivityWorkBinding binding;
         binding=ActivityWorkBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
         ActionBar actionBar = getSupportActionBar();
         Objects.requireNonNull(actionBar).setBackgroundDrawable(getResources().getDrawable(R.drawable.action_bar_bakground));
-        actionBar.setTitle("Work");
+        actionBar.setTitle("Works");
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
@@ -42,6 +49,7 @@ ActivityWorkBinding binding;
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(WorkActivity.this, Work_viewer_Activity.class);
+
                 startActivity(intent);
             }
         });
@@ -82,6 +90,41 @@ ActivityWorkBinding binding;
                 Toast.makeText(this, "Move to Trash", Toast.LENGTH_SHORT).show();
                 break;
         }
+        return true;
+    }
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.search_menu,menu);
+//        MenuItem menuItem=menu.findItem(R.id.action_search);
+//        SearchView searchView=(SearchView) menuItem.getActionView();
+//        searchView .setQueryHint("Type here to search");
+//
+//        searchView.setBackgroundResource(R.drawable.login_edittext_background);
+//
+//        searchView.setQueryHint("Type here to search");
+//
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//        arrayAdapter.getFilter().filter(newText);
+//                return false;
+//            }
+//        });
+//
+//
+//
+//        return super.onCreateOptionsMenu(menu);
+//    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.search_menu,menu);
         return true;
     }
 

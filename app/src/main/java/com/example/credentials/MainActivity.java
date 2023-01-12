@@ -45,6 +45,7 @@ ActivityMainBinding binding;
 
 
 
+
         ActionBar actionBar = getSupportActionBar();
         Objects.requireNonNull(actionBar).setBackgroundDrawable(getResources().getDrawable(R.drawable.action_bar_bakground));
 

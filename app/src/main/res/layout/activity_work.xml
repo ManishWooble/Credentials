@@ -8,6 +8,9 @@
     android:background="#252627"
     tools:context=".WorkActivity">
 
+
+
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/work"
         android:layout_width="match_parent"
@@ -85,7 +88,6 @@
                         android:layout_gravity="start"
                         android:textColor="#CCFFFFFF"
                         android:fontFamily="@font/ubuntu"
-                        android:maxLength="70"
                         android:textSize="16sp"/>
                 </LinearLayout>
 

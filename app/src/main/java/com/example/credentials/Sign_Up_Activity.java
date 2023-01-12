@@ -36,8 +36,6 @@ ActivitySignUpBinding binding;
         
         spantext();
 
-
-
         binding.gotoSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,10 +46,8 @@ ActivitySignUpBinding binding;
        binding.ivBack.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent=new Intent(Sign_Up_Activity.this, IntroActivity.class);
-               startActivity(intent);
-               finish();
-           }
+               startActivity(new Intent(getApplicationContext(), IntroActivity.class));
+               overridePendingTransition(R.anim.anim_left_to_right, R.anim.anim_right_to_left);           }
        });
     }
 
